@@ -11,6 +11,7 @@ namespace APIDevSteamJau.Models
 
         public Usuario() : base()
         {
+
         }
     }
 }

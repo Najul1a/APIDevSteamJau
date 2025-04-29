@@ -16,6 +16,9 @@ namespace APIDevSteamJau.Data
 
         public DbSet<Carrinho> Carrinhos { get; set; }
         public DbSet<ItemCarrinho> ItensCarrinhos { get; set; }
+        public DbSet<Cupom> Cupons { get; set; }
+        public DbSet<CupomCarrinho> CuponsCarrinho { get; set; }
+
 
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -29,6 +32,10 @@ namespace APIDevSteamJau.Data
 
             builder.Entity<Carrinho>().ToTable("Carrinhos");
             builder.Entity<ItemCarrinho>().ToTable("ItensCarrinhos");
+            builder.Entity<Cupom>().ToTable("Cupons");
+            builder.Entity<CupomCarrinho>().ToTable("CuponsCarrinho");
         }
+        public DbSet<APIDevSteamJau.Models.CupomCarrinho> CupomCarrinho { get; set; } = default!;
+        public object Cupom { get; internal set; }
     }
 }
